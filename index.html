@@ -8,23 +8,31 @@
 </head>
 <body>
 
-  <header>
+  <header class="container">
   	<h1>Cool Website</h1>
   	<p>Such a cool website</p>
   </header>
 
   <nav class="nav">
-  	<ul>
-  		<li><a href="#article1">Link 1</a></li>
-  		<li><a href="#article2">Link 2</a></li>
-  		<li><a href="#article3">Link 3</a></li>
-  		<li><a href="#article4">Link 4</a></li>
+  	<ul class="container display-flex">
+  		<li class="flex-stretch"><a href="#article1">Link 1</a></li>
+  		<li class="flex-stretch"><a href="#article2">Link 2</a></li>
+  		<li class="flex-stretch"><a href="#article3">Link 3</a></li>
+  		<li class="flex-stretch"><a href="#article4">Link 4</a></li>
   	</ul>
   </nav>
 
   <div class="container">
   	<article id="article1" class="article">
-  	  <h2>Article</h2>
+  	  <div class="display-flex flex-align-center">
+  	  	<div class="flex-stretch">
+	  	  <h2>Article</h2>
+	  	</div>
+	  	<div class="flex-none">
+	  	  <small>5:20am</small>
+	  	</div>
+      </div>
+
   	  <div class="article-body"></div>
   	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
