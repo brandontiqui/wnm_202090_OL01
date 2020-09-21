@@ -9,14 +9,20 @@
 	--color-neutral-medium: #999;
 	--color-neutral-dark: #555;
 
+	--color-black: #000;
+	--color-white: #fff;
+
 	--header-height: 3rem;
 	--spacing: 1rem;
+
+	--font-serif: Georgia, "Times New Roman", serif;
+	--font-sans: Helvetica, Arial, sans-serif;
 }
 
 body {
 	margin: 0;
 	font-size: 100%;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: var(--font-sans);
 }
 
 h1,
@@ -25,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Georgia, "Times New Roman", serif;
+	font-family: var(--font-serif);
 }
 
 a {
@@ -55,3 +61,27 @@ a:hover {
 
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
+
+/* COMPONENT CLASSES */
+
+.nav ul {
+	list-style-type: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.navbar {
+	background-color: var(--color-neutral-dark);
+	color: var(--color-white);
+	line-height: var(--header-height);
+}
+
+	.navbar h1 {
+		font-size: 1em;
+		margin: 0;
+    font-family: var(--font-sans);
+	}
+	.navbar a {
+		padding: 0 0.5em;
+	}
