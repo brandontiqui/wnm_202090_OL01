@@ -70,6 +70,15 @@ a:hover {
 	margin-bottom: 0;
 	padding-left: 0;
 }
+	.nav a {
+		display: block;
+		padding: 0.2em 0.5em;
+	}
+	.nav a:hover {
+		background-color: var(--color-main-medium);
+		color: var(--color-white);
+		text-decoration: none;
+	}
 
 .navbar {
 	background-color: var(--color-neutral-dark);
@@ -127,4 +136,25 @@ a:hover {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+}
+
+/* BACKGROUND COLORS */
+.med-green-1 {
+	background-color: var(--color-palette-medium-green) !important;
+}
+
+.lt-green {
+	background-color: var(--color-palette-light-green) !important;
+}
+
+.med-green-2 {
+	background-color: var(--color-palette-medium-green-2) !important;
+}
+
+.dark-green {
+	background-color: var(--color-palette-dark-green) !important;
+}
+
+.white {
+	background-color: var(--color-palette-white) !important;
 }

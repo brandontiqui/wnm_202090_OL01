@@ -1,6 +1,16 @@
 
 :root {
 	--color-offwhite: #f4f4f4;
+
+	--color-main-light: #cbebf9;
+	--color-main-medium: #2592c3;
+	--color-main-dark: #052b3c;
+
+	--color-palette-medium-green: #75A644;
+	--color-palette-light-green: #90D923;
+	--color-palette-medium-green-2: #5D732D;
+	--color-palette-dark-green: #495927;
+	--color-palette-white: #F2F2F2;
 }
 
 body {
