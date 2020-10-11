@@ -11,4 +11,5 @@
 
 body {
 	background-color: var(--color-offwhite);
+	padding-bottom: 4em;
 }
