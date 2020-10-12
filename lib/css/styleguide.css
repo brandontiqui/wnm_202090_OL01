@@ -166,7 +166,7 @@ a:hover {
 /* FORMS */
 
 .form-control {
-
+  margin: 1em 0;
 }
 
 .form-input {
@@ -191,4 +191,27 @@ a:hover {
 	color: var(--color-neutral-medium);
 	display: block;
 	width: 100%;
+}
+
+.form-button {
+	display: inline-block;
+	background-color: var(--color-neutral-light);
+	border-width: 0;
+	padding: 0.5em 1em;
+	font: inherit;
+	-webkit-appearance: none;
+	color: inherit;
+	width: 100%;
+	outline: 0;
+	border-radius: 0.2em;
+	cursor: pointer;
+	text-align: center;
+}
+
+.form-button:active {
+	background-color: var(--color-main-light);
+}
+
+.form-button:hover {
+	text-decoration: none;
 }
