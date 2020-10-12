@@ -215,3 +215,36 @@ a:hover {
 .form-button:hover {
 	text-decoration: none;
 }
+
+/* ALERTS*/
+.alert {
+	padding: 1em;
+	background-color: rgba(255, 0, 0, 0.2);
+	border-width: 20px;
+	color: red;
+	border-radius: 0.5em;
+}
+.info {
+	padding: 1em;
+	background-color: #D9EDF7;
+	border-width: 20px;
+	color: blue;
+	border-radius: 0.5em;
+}
+.success {
+	padding: 1em;
+	background-color: rgba(0, 255, 0, 0.2);;
+	border-width: 20px;
+	color: green;
+	border-radius: 0.5em;
+}
+.closebtn {
+	margin-left: 1em;
+	color: var(--color-white);
+	font-weight: bold;
+	float: right;
+	font-size: 1.3em;
+	line-height: 0.2em;
+	cursor: pointer;
+	transition: 0.3s;
+}
