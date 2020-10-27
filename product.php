@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>KatsPlants&More - Home</title>
+	<title>KatsPlants&More - Product</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="css/storetheme.css">
@@ -12,10 +12,10 @@
   <?php include "php/components/navbar.php"; ?>
 
   <div class="container">
-  	<article id="article1" class="article card soft">
+  	<article id="about" class="article card soft">
   	  <div class="display-flex flex-align-center">
   	  	<div class="flex-stretch">
-	  	  <h2>Welcome to the store!</h2>
+	  	  <h2>Product #</h2>
 	  	</div>
 	  	<div class="flex-none">
 	  	  <small>5:20am</small>

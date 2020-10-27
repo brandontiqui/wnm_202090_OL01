@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>JCS Music Studio</title>
+	<title>KatsPlants&More - Cart</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="css/storetheme.css">
@@ -15,11 +15,11 @@
   	<article id="about" class="article card soft">
   	  <div class="display-flex flex-align-center">
   	  	<div class="flex-stretch">
-	  	  <h2>Cart</h2>
-	  	</div>
-	  	<div class="flex-none">
-	  	  <small>5:20am</small>
-	  	</div>
+  	  	  <h2>Cart</h2>
+  	  	</div>
+  	  	<div class="flex-none">
+  	  	  <small>5:20am</small>
+  	  	</div>
       </div>
 
   	  <div class="article-body"></div>

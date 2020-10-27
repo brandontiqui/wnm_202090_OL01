@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>JCS Music Studio</title>
+	<title>KatsPlants&More - About</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
 	<link rel="stylesheet" href="css/storetheme.css">
