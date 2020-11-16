@@ -41,6 +41,15 @@
   	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <?php
+
+        ?>
+
+        <figure class="figure">
+          <img src="https://via.placeholder.com/400x400?text=product" alt="">
+          <figcaption>Product</figcaption>
+        </figure>
   	</article>
   </div>
 

@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>KatsPlants&More - Products</title>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
+  <link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
@@ -29,7 +30,24 @@
         <li><a href="product.php">Product 4</a></li>
         <li><a href="product.php">Product 5</a></li>
       </ul>
-  	  <div class="article-body"></div>
+
+      <?php
+        include_once "php/functions.php";
+        include_once "php/components/templates.php";
+
+        $result = makeQuery(
+          makeConn(),
+          "
+          SELECT *
+          FROM
+          `products`
+          "
+        );
+
+        // print_p($result);
+
+        echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'), "</div>";
+      ?>
   </div>
 
 </body>
