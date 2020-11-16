@@ -45,6 +45,11 @@
         <?php
 
         ?>
+
+        <figure class="figure">
+          <img src="https://via.placeholder.com/400x400?text=product" alt="">
+          <figcaption>Product</figcaption>
+        </figure>
   	</article>
   </div>
 
