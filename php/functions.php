@@ -4,7 +4,7 @@ function print_p($v) {
 	echo "<pre>",print_r($v),"</pre>";
 }
 
-include "auth.php";
+include_once "auth.php";
 
 function makeConn() {
 	$conn = new mysqli(...MYSQLIAuth());

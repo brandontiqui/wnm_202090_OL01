@@ -31,11 +31,21 @@
       </ul>
 
       <?php
-        include "php/functions.php";
+        include_once "php/functions.php";
+        include_once "php/components/templates.php";
 
-        $result = makeQuery(makeConn(), "SELECT * FROM `products`");
+        $result = makeQuery(
+          makeConn(),
+          "
+          SELECT *
+          FROM
+          `products`
+          "
+        );
 
-        print_p($result);
+        // print_p($result);
+
+        echo array_reduce($result, 'productListTemplate');
       ?>
   </div>
 
