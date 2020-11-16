@@ -29,7 +29,14 @@
         <li><a href="product.php">Product 4</a></li>
         <li><a href="product.php">Product 5</a></li>
       </ul>
-  	  <div class="article-body"></div>
+
+      <?php
+        include "php/functions.php";
+
+        $result = makeQuery(makeConn(), "SELECT * FROM `products`");
+
+        print_p($result);
+      ?>
   </div>
 
 </body>
