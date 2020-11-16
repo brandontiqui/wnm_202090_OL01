@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<title>KatsPlants&More - Products</title>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
+  <link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
@@ -45,7 +46,7 @@
 
         // print_p($result);
 
-        echo array_reduce($result, 'productListTemplate');
+        echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'), "</div>";
       ?>
   </div>
 
