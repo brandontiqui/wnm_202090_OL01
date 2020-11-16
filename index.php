@@ -4,7 +4,10 @@
 	<meta charset="UTF-8">
 	<title>KatsPlants&More - Home</title>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="lib/css/styleguide.css">
+	<link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
