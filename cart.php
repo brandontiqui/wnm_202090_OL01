@@ -1,3 +1,14 @@
+<?php
+
+  include_once "php/functions.php";
+  include_once "php/components/templates.php";
+
+  $cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `product_id` IN (1, 3, 5)");
+
+  // print_p($product);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +16,7 @@
 	<title>KatsPlants&More - Cart</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
+  <link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
@@ -12,38 +24,33 @@
   <?php include "php/components/navbar.php"; ?>
 
   <div class="container">
-  	<article id="about" class="article card soft">
-  	  <div class="display-flex flex-align-center">
-  	  	<div class="flex-stretch">
-  	  	  <h2>Cart</h2>
-  	  	</div>
-  	  	<div class="flex-none">
-  	  	  <small>5:20am</small>
-  	  	</div>
-      </div>
-
-  	  <div class="article-body"></div>
-  	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  	</article>
+     <h2>Cart</h2>
+     <div class="grid gap">
+       <div class="col-xs-12 col-md-7">
+         <div class="card soft">
+           <?= array_reduce($cart, 'cartListTemplate') ?>
+         </div>
+       </div>
+       <div class="col-xs-12 col-md-5">
+         <div class="card soft flat">
+           <div class="card-section display-flex">
+             <div class="flex-stretch"><strong>Subtotal</strong></div>
+             <div class="flex-none">&dollar;5.00</div>
+           </div>
+           <div class="card-section display-flex">
+             <div class="flex-stretch"><strong>Subtotal</strong></div>
+             <div class="flex-none">&dollar;5.00</div>
+           </div>
+           <div class="card-section display-flex">
+             <div class="flex-stretch"><strong>Subtotal</strong></div>
+             <div class="flex-none">&dollar;5.00</div>
+           </div>
+           <div class="card-section">
+             <a href="checkout.php" class="form-button">Checkout</a>
+           </div>
+         </div>
+       </div>
+     </div>
   </div>
-
-
 </body>
 </html>

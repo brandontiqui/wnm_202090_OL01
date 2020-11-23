@@ -1,3 +1,13 @@
+<?php
+
+  include_once "php/functions.php";
+
+  $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `product_id`=".$_GET['id'])[0];
+
+  // print_p($_SESSION);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +15,7 @@
 	<title>KatsPlants&More - Product</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
+  <link rel="stylesheet" href="lib/css/gridsystem.css">
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
@@ -12,47 +23,51 @@
   <?php include "php/components/navbar.php"; ?>
 
   <div class="container">
-  	<article id="about" class="article card soft">
-  	  <div class="display-flex flex-align-center">
-  	  	<div class="flex-stretch">
-	  	  <h2>Product #</h2>
-	  	</div>
-	  	<div class="flex-none">
-	  	  <small>5:20am</small>
-	  	</div>
-      </div>
-
-  	  <div class="article-body"></div>
-  	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  	    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  	    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  	    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  	    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <?php
-
-        ?>
-
-        <figure class="figure">
+    <div class="grid gap">
+      <div class="col-xs-12 col-md-7">
+        <div class="card soft">
           <img src="https://via.placeholder.com/400x400?text=product" alt="">
-          <figcaption>Product</figcaption>
-        </figure>
-  	</article>
-  </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-5">
+        <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
 
+          <input type="hidden" name="product-id" value="<?= $product->product_id ?>">
+
+          <div class="card-section">
+            <h2 class="product-title"><?= $product->name ?></h2>
+            <div class="product-price">&dollar;<?= $product->price ?></div>
+          </div>
+
+          <div class="card-section">
+            <label for="product-amount" class="form-label">Amount</label>
+            <div class="form-select">
+              <select id="product-amount" name="product-amount">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="card-section">
+            <input type="submit" class="form-button" value="Add To Cart">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card soft dark">
+      <p>description</p>
+    </div>
+  </div>
 
 </body>
 </html>

@@ -133,6 +133,13 @@ a:hover {
 		padding: 0;
 	}
 
+	.card-section~.card-section {
+		border-top: 1px solid var(--color-neutral-light);
+	}
+	.card-section {
+		padding: 1em;
+	}
+
 .view-window {
 	height: 50vh;
 	position: relative;
@@ -167,6 +174,41 @@ a:hover {
 
 .form-control {
   margin: 1em 0;
+}
+.form-select>select,
+.form-input,
+.form-item {
+	display: inline-block;
+	background-color: transparent;
+	border-width: 0;
+	font: inherit;
+	-webkit-appearance: none;
+	color: inherit;
+	width: 100%;
+	outline: 0;
+}
+
+.form-select>select {
+	padding: 0.5em 1em;
+	background-color: var(--color-neutral-light);
+	border-radius: 0.3em;
+	cursor: pointer;
+}
+
+.form-select {
+	position: relative;
+}
+
+.form-select::after {
+	content: '▾';
+	font-family: arial, sans-serif;
+	font-size: 1.2em;
+	position: absolute;
+	top: 50%;
+	right: 0.5em;
+	transform: translateY(-50%);
+	pointer-events: none;
+	color: var(--color-neutral-medium);
 }
 
 .form-input {
