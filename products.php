@@ -1,3 +1,8 @@
+<?php
+  include_once "php/functions.php";
+  include_once "php/components/templates.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +29,6 @@
       </div>
 
       <?php
-        include_once "php/functions.php";
-        include_once "php/components/templates.php";
 
         $result = makeQuery(
           makeConn(),

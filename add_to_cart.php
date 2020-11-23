@@ -6,6 +6,8 @@
 
   // print_p($product);
 
+  $cart_product = arrayFind(getCart(), function($o){return $o->id==$_GET['id'];});
+  // print_p($cart_product);
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,7 @@
   <div class="container">
   	<div class="card soft">
      <h2>You added <?= $product->name ?> to your cart</h2>
+     <p>There are now <?= $cart_product->amount ?> of <?= $product->name ?> in your cart.</p>
      <div class="display-flex">
        <div class="flex-none"><a href="products.php">Continue Shopping</a></div>
        <div class="flex-stretch"></div>

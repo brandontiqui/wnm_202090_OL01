@@ -4,7 +4,7 @@
 
   $product = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `product_id`=".$_GET['id'])[0];
 
-  // print_p($product);
+  // print_p($_SESSION);
 
 ?>
 
@@ -30,7 +30,10 @@
         </div>
       </div>
       <div class="col-xs-12 col-md-5">
-        <div class="card soft flat">
+        <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
+
+          <input type="hidden" name="product-id" value="<?= $product->product_id ?>">
+
           <div class="card-section">
             <h2 class="product-title"><?= $product->name ?></h2>
             <div class="product-price">&dollar;<?= $product->price ?></div>
@@ -38,8 +41,8 @@
 
           <div class="card-section">
             <label for="product-amount" class="form-label">Amount</label>
-            <div class="form-select" id="product-amount">
-              <select>
+            <div class="form-select">
+              <select id="product-amount" name="product-amount">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -55,9 +58,9 @@
           </div>
 
           <div class="card-section">
-            <a href="add_to_cart.php?id=<?= $product->product_id ?>" class="form-button">Add To Cart</a>
+            <input type="submit" class="form-button" value="Add To Cart">
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
