@@ -23,14 +23,6 @@
 	  	</div>
       </div>
 
-      <ul>
-        <li><a href="product.php">Product 1</a></li>
-        <li><a href="product.php">Product 2</a></li>
-        <li><a href="product.php">Product 3</a></li>
-        <li><a href="product.php">Product 4</a></li>
-        <li><a href="product.php">Product 5</a></li>
-      </ul>
-
       <?php
         include_once "php/functions.php";
         include_once "php/components/templates.php";
