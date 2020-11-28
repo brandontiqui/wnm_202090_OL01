@@ -236,18 +236,23 @@ a:hover {
 }
 
 .form-button {
-	display: inline-block;
 	background-color: var(--color-neutral-light);
-	border-width: 0;
 	padding: 0.5em 1em;
-	font: inherit;
-	-webkit-appearance: none;
-	color: inherit;
-	width: 100%;
-	outline: 0;
 	border-radius: 0.2em;
 	cursor: pointer;
 	text-align: center;
+
+	font: inherit;
+  -webkit-appearance: none;
+  color: inherit;
+  width: 100%;
+  outline: 0;
+  display: inline-block;
+  border-width: 0;
+}
+
+.form-button.inline {
+	width: initial;
 }
 
 .form-button:active {

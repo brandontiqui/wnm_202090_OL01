@@ -26,7 +26,10 @@ function cartListTemplate($r, $o) {
       <div class="flex-stretch">
         <strong>$o->name</strong>
         <div>Quantity: $o->amount</div>
-        <div>Delete</div>
+        <form action="cart_actions.php" method="post">
+          <input type="hidden" name="id" value="$o->id">
+          <input type="submit" class="form-button inline" value="Delete" style="font-size:0.8em">
+        </form>
       </div>
       <div class="flex-none">
         &dollar;$totalfixed
@@ -44,7 +47,7 @@ function cartTotals() {
 
   $pricefixed = number_format($cartprice, 2, '.', '');
   $taxfixed = number_format($cartprice * 0.0725, 2, '.', '');
-  $totalfixed = $pricefixed + $taxfixed;
+  $totalfixed = number_format($pricefixed + $taxfixed, 2, '.', '');
 
   return <<<HTML
     <div class="card-section display-flex">
