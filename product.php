@@ -24,12 +24,14 @@
 
   <div class="container">
     <div class="grid gap">
-      <div class="col-xs-12 col-md-7">
+      <div class="col-xs-12 col-md-6">
         <div class="card soft">
-          <img src="https://via.placeholder.com/400x400?text=product" alt="">
+          <figure class="figure product">
+            <img src="/WNM608/img/plant_<?= $product->product_id ?>.jpg" alt="">
+          </figure>
         </div>
       </div>
-      <div class="col-xs-12 col-md-5">
+      <div class="col-xs-12 col-md-6">
         <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
 
           <input type="hidden" name="product-id" value="<?= $product->product_id ?>">
