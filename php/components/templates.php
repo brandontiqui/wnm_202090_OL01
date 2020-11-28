@@ -19,6 +19,9 @@ function productListTemplate($r, $o) {
 function cartListTemplate($r, $o) {
   return $r.<<<HTML
     <div class="display-flex">
+      <div class="flex-none images-thumbs">
+        <img src="/WNM608/img/plant_$o->product_id.jpg" alt="">
+      </div>
       <div class="flex-stretch">
         <strong>$o->name</strong>
         <div>Delete</div>

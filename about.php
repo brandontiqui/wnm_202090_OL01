@@ -1,3 +1,9 @@
+<?php
+
+  include_once "php/components/navbar.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +14,6 @@
 	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
-
-  <?php include "php/components/navbar.php"; ?>
 
   <div class="container">
   	<article id="about" class="article card soft">
