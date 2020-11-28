@@ -2,7 +2,7 @@
 <header class="navbar">
 	<div class="container display-flex">
 	  <div class="flex-none">
-	    <h1>KatsPlants&More</h1>
+	    <h1>Kat's Plants and more</h1>
 	  </div>
 	  <div class="flex-stretch"></div>
 	  <nav class="flex-none nav">
