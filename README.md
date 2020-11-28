@@ -1,4 +1,4 @@
 # wnm_202090_OL01
 
-- http://btiqui.surge.sh
-- http://btiqui.surge.sh/styleguide/index.html
+- http://brandontiqui.com/WNM608/products.php
+- http://brandontiqui.com/WNM608/styleguide/
