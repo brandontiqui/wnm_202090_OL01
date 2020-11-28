@@ -35,21 +35,7 @@
        </div>
        <div class="col-xs-12 col-md-5">
          <div class="card soft flat">
-           <div class="card-section display-flex">
-             <div class="flex-stretch"><strong>Subtotal</strong></div>
-             <div class="flex-none">&dollar;5.00</div>
-           </div>
-           <div class="card-section display-flex">
-             <div class="flex-stretch"><strong>Subtotal</strong></div>
-             <div class="flex-none">&dollar;5.00</div>
-           </div>
-           <div class="card-section display-flex">
-             <div class="flex-stretch"><strong>Subtotal</strong></div>
-             <div class="flex-none">&dollar;5.00</div>
-           </div>
-           <div class="card-section">
-             <a href="checkout.php" class="form-button">Checkout</a>
-           </div>
+          <?= cartTotals() ?>
          </div>
        </div>
      </div>
