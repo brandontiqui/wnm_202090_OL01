@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>KatsPlants&More - Product</title>
+	<title>Kat's Plants and more - Product</title>
 
 	<link rel="stylesheet" href="lib/css/styleguide.css">
   <link rel="stylesheet" href="lib/css/gridsystem.css">
@@ -24,14 +24,14 @@
 
   <div class="container">
     <div class="grid gap">
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-7">
         <div class="card soft">
           <figure class="figure product">
             <img src="/WNM608/img/plant_<?= $product->product_id ?>.jpg" alt="">
           </figure>
         </div>
       </div>
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-5">
         <form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
 
           <input type="hidden" name="product-id" value="<?= $product->product_id ?>">

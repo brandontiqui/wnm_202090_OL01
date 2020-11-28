@@ -3,9 +3,9 @@
 	--color-offwhite: #f4f4f4;
 
 	--color-palette-medium-green: #75A644;
-	--color-palette-light-green: #90D923;
+	--color-palette-light-green: #8CE084;
 	--color-palette-medium-green-2: #5D732D;
-	--color-palette-dark-green: #495927;
+	--color-palette-dark-green: #406660;
 	--color-palette-white: #F2F2F2;
 }
 
@@ -64,6 +64,15 @@ body {
 	transform: scale(1.4, 1.4);
 }
 
+.product img {
+	transform: scale(1, 1);
+	transition: all 0.3s;
+}
+
+.product:hover img {
+	transform: scale(1.4, 1.4);
+}
+
 @media (max-width: 600px) {
 	.product-overlay figcaption {
 		position: relative;
@@ -85,5 +94,10 @@ body {
 .images-main img {
 	width: 100%;
 	height: 40vh;
+	object-fit: contain;
+}
+.images-thumbs img {
+	width: 8em;
+	height: 6em;
 	object-fit: contain;
 }
