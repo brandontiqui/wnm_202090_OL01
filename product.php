@@ -14,9 +14,8 @@
 	<meta charset="UTF-8">
 	<title>Kat's Plants and more - Product</title>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-  <link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
+	<?php include_once "php/components/metadata.php"; ?>
+
 </head>
 <body>
 

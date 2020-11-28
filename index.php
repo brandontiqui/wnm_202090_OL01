@@ -2,19 +2,16 @@
 
   include_once "php/components/navbar.php";
 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Kat's Plants and more - Home</title>
+  <title>Kat's Plants and more - Home</title>
 
-  <meta name="viewport" content="width=device-width">
+  <?php include_once "php/components/metadata.php"; ?>
 
-  <link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
 </head>
 <body>
 
