@@ -6,3 +6,8 @@ const query = (options) => {
 		headers: {'Content-Type': 'application/json'}
 	}).then(d => d.json());
 }
+
+const templater = f => a =>
+  (Array.isArray(a) ? a : [a])
+  	.reduce((r, o, i, a) => r + f(o, i, a), '');
+

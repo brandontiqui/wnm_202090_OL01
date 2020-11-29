@@ -12,8 +12,12 @@
   <?php include_once "php/components/metadata.php"; ?>
 
   <script src="js/functions.js"></script>
+  <script src="js/templates.js"></script>
   <script>
-    query({type: 'products_all'});
+    query({type: 'products_all'})
+      .then(d => {
+        $(".productlist").html(listItemTemplate(d.result));
+      });
   </script>
 
 </head>
@@ -34,7 +38,8 @@
 	  	</div>
     </div>
 
-      <?php
+      <div class='productlist grid gap'>
+      <!-- ?php
 
         $result = makeQuery(
           makeConn(),
@@ -48,7 +53,7 @@
         // print_p($result);
 
         echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'), "</div>";
-      ?>
+      ?> -->
   </div>
 
 </body>
