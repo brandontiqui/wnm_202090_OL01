@@ -11,6 +11,11 @@
 
   <?php include_once "php/components/metadata.php"; ?>
 
+  <script src="js/functions.js"></script>
+  <script>
+    query({type: 'products_all'});
+  </script>
+
 </head>
 <body>
 
@@ -21,11 +26,13 @@
   	  <div class="display-flex flex-align-center">
   	  	<div class="flex-stretch">
 	  	  <h2>Products</h2>
+        <div class="form-control">
+          <form class="hotdog light" id="product-search">
+            <input type="search" placeholder="Search Products">
+          </form>
+        </div>
 	  	</div>
-	  	<div class="flex-none">
-	  	  <small>5:20am</small>
-	  	</div>
-      </div>
+    </div>
 
       <?php
 

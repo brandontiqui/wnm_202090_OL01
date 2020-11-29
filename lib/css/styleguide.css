@@ -175,6 +175,8 @@ a:hover {
 .form-control {
   margin: 1em 0;
 }
+.hotdog input,
+.hotdog,
 .form-select>select,
 .form-input,
 .form-item {
@@ -261,6 +263,13 @@ a:hover {
 
 .form-button:hover {
 	text-decoration: none;
+}
+
+.hotdog {
+	background-color: var(--color-neutral-light);
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+	display: flex;
 }
 
 /* ALERTS*/
