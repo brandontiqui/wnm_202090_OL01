@@ -9,9 +9,12 @@
 	<meta charset="UTF-8">
 	<title>Kat's Plants and more - Products</title>
 
-  <link rel="stylesheet" href="lib/css/styleguide.css">
-	<link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
+  <?php include_once "php/components/metadata.php"; ?>
+
+  <script src="js/functions.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/product_list.js"></script>
+
 </head>
 <body>
 
@@ -22,27 +25,30 @@
   	  <div class="display-flex flex-align-center">
   	  	<div class="flex-stretch">
 	  	  <h2>Products</h2>
+        <p></p>
+        <div class="form-control">
+          <form class="hotdog light" id="product-search">
+            <input type="search" placeholder="Search Products">
+          </form>
+        </div>
+        <div class="form-control display-flex" style="margin-right: 5px">
+          <div class="flex filter-button">
+            <button data-filter="category" data-value="" type="button" class="form-button">All</button>
+          </div>
+          <div class="flex-none filter-button">
+            <button data-filter="category" data-value="Air plants" type="button" class="form-button">Air plants</button>
+          </div>
+          <div class="flex-none filter-button">
+            <button data-filter="category" data-value="Succulent" type="button" class="form-button">Succulents</button>
+          </div>
+          <div class="flex-none filter-button">
+            <button data-filter="category" data-value="Other" type="button" class="form-button">Other</button>
+          </div>
+        </div>
 	  	</div>
-	  	<div class="flex-none">
-	  	  <small>5:20am</small>
-	  	</div>
-      </div>
+    </div>
 
-      <?php
-
-        $result = makeQuery(
-          makeConn(),
-          "
-          SELECT *
-          FROM
-          `products`
-          "
-        );
-
-        // print_p($result);
-
-        echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'), "</div>";
-      ?>
+      <div class='productlist grid gap'>
   </div>
 
 </body>

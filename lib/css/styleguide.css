@@ -10,7 +10,7 @@
 	--color-neutral-dark: #406660;
 
 	--color-main-light: #cbebf9;
-	--color-main-medium: #2592c3;
+	--color-main-medium: #75A644;
 	--color-main-dark: #052b3c;
 
 	--color-black: #000;
@@ -65,6 +65,11 @@ a:hover {
 
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
+
+.display-flex .filter-button {
+	padding-right: 5px;
+	font-size: 0.8em;
+}
 
 /* COMPONENT CLASSES */
 
@@ -127,6 +132,7 @@ a:hover {
 
 	.card.medium {
 		background-color: var(--color-neutral-medium);
+		color: var(--color-white);
 	}
 
 	.card.flat {
@@ -175,6 +181,8 @@ a:hover {
 .form-control {
   margin: 1em 0;
 }
+.hotdog input,
+.hotdog,
 .form-select>select,
 .form-input,
 .form-item {
@@ -261,6 +269,13 @@ a:hover {
 
 .form-button:hover {
 	text-decoration: none;
+}
+
+.hotdog {
+	background-color: var(--color-neutral-light);
+	border-radius: 2em;
+	padding: 0.5em 1.5em;
+	display: flex;
 }
 
 /* ALERTS*/

@@ -14,9 +14,8 @@
 	<meta charset="UTF-8">
 	<title>Kat's Plants and more - Product</title>
 
-	<link rel="stylesheet" href="lib/css/styleguide.css">
-  <link rel="stylesheet" href="lib/css/gridsystem.css">
-	<link rel="stylesheet" href="css/storetheme.css">
+	<?php include_once "php/components/metadata.php"; ?>
+
 </head>
 <body>
 
@@ -63,11 +62,11 @@
             <input type="submit" class="form-button" value="Add To Cart">
           </div>
         </form>
-      </div>
-    </div>
 
-    <div class="card soft dark">
-      <p>description</p>
+        <div class="card soft medium">
+          <p><?= $product->description ?></p>
+        </div>
+      </div>
     </div>
   </div>
 
