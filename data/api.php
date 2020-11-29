@@ -16,6 +16,14 @@ switch($data->type) {
 			ORDER BY `add_date` DESC
 			");
 		break;
+	case "products_search":
+		$output['result'] = makeQuery(makeConn(), "
+			SELECT *
+			FROM `products`
+			WHERE `name` LIKE '%$data->search%'
+			ORDER BY `add_date` DESC
+			");
+		break;
 	default: $output['error'] = "No valid type";
 }
 

@@ -13,12 +13,7 @@
 
   <script src="js/functions.js"></script>
   <script src="js/templates.js"></script>
-  <script>
-    query({type: 'products_all'})
-      .then(d => {
-        $(".productlist").html(listItemTemplate(d.result));
-      });
-  </script>
+  <script src="js/product_list.js"></script>
 
 </head>
 <body>
@@ -30,6 +25,7 @@
   	  <div class="display-flex flex-align-center">
   	  	<div class="flex-stretch">
 	  	  <h2>Products</h2>
+        <p></p>
         <div class="form-control">
           <form class="hotdog light" id="product-search">
             <input type="search" placeholder="Search Products">
@@ -39,21 +35,6 @@
     </div>
 
       <div class='productlist grid gap'>
-      <!-- ?php
-
-        $result = makeQuery(
-          makeConn(),
-          "
-          SELECT *
-          FROM
-          `products`
-          "
-        );
-
-        // print_p($result);
-
-        echo "<div class='grid gap'>", array_reduce($result, 'productListTemplate'), "</div>";
-      ?> -->
   </div>
 
 </body>
