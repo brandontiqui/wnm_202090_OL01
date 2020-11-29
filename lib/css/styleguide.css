@@ -66,6 +66,11 @@ a:hover {
 .flex-align-center { align-items: center; }
 .flex-justify-center { justify-content: center; }
 
+.display-flex .filter-button {
+	padding-right: 5px;
+	font-size: 0.8em;
+}
+
 /* COMPONENT CLASSES */
 
 .nav ul {
@@ -127,6 +132,7 @@ a:hover {
 
 	.card.medium {
 		background-color: var(--color-neutral-medium);
+		color: var(--color-white);
 	}
 
 	.card.flat {

@@ -31,6 +31,20 @@
             <input type="search" placeholder="Search Products">
           </form>
         </div>
+        <div class="form-control display-flex" style="margin-right: 5px">
+          <div class="flex filter-button">
+            <button data-filter="category" data-value="" type="button" class="form-button">All</button>
+          </div>
+          <div class="flex-none filter-button">
+            <button data-filter="category" data-value="Air plants" type="button" class="form-button">Air plants</button>
+          </div>
+          <div class="flex-none filter-button">
+            <button data-filter="category" data-value="Succulent" type="button" class="form-button">Succulents</button>
+          </div>
+          <div class="flex-none filter-button">
+            <button data-filter="category" data-value="Other" type="button" class="form-button">Other</button>
+          </div>
+        </div>
 	  	</div>
     </div>
 

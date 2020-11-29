@@ -10,10 +10,17 @@ query({type: 'products_all'})
 $(()=>{
 	$("#product-search").on("submit", function(e) {
 		e.preventDefault();
-		let search = $(this).find("input").val();
-		console.log('search');
-		console.log(search);
+		const search = $(this).find("input").val();
 		query({type: 'products_search', search: search})
+		  .then(showResults);
+	});
+
+	$("[data-filter]").on("click", function(e) {
+		const column = $(this).data("filter");
+		const value = $(this).data("value");
+		query(
+			value === "" ? {type: 'products_all'} :
+			{type: 'products_filter', column: column, value: value})
 		  .then(showResults);
 	});
 });

@@ -24,6 +24,14 @@ switch($data->type) {
 			ORDER BY `add_date` DESC
 			");
 		break;
+	case "products_filter":
+		$output['result'] = makeQuery(makeConn(), "
+			SELECT *
+			FROM `products`
+			WHERE `$data->column` = '$data->value'
+			ORDER BY `add_date` DESC
+			");
+		break;
 	default: $output['error'] = "No valid type";
 }
 

@@ -62,11 +62,11 @@
             <input type="submit" class="form-button" value="Add To Cart">
           </div>
         </form>
-      </div>
-    </div>
 
-    <div class="card soft dark">
-      <p>description</p>
+        <div class="card soft medium">
+          <p><?= $product->description ?></p>
+        </div>
+      </div>
     </div>
   </div>
 
