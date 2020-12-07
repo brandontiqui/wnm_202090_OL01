@@ -5,9 +5,11 @@
 
   // $cart = makeQuery(makeConn(), "SELECT * FROM `products` WHERE `product_id` IN (1, 3, 5)");
 
-  //print_p($cart);
+  // print_p($cart);
 
   $cart_items = getCartItems();
+
+  // print_p($cart_items);
 
 ?>
 
